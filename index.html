@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Click Page</title>
+    <title>Clickable Images</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
-        .btn-container { margin-top: 20px; }
-        button { font-size: 18px; padding: 10px 20px; margin: 10px; }
+        .img-container { margin-top: 20px; }
+        img { width: 150px; height: 150px; margin: 10px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <h1>Click a Button!</h1>
-    <div class="btn-container">
-        <button onclick="buttonClicked('Button 1')">Button 1</button>
-        <button onclick="buttonClicked('Button 2')">Button 2</button>
-        <button onclick="buttonClicked('Button 3')">Button 3</button>
-        <button onclick="buttonClicked('Button 4')">Button 4</button>
- 
+    <h1>Click an Image!</h1>
+    <div class="img-container">
+        <img src="image1.png" alt="Image 1" onclick="imageClicked('Image 1')">
+        <img src="image2.png" alt="Image 2" onclick="imageClicked('Image 2')">
+        <img src="image3.png" alt="Image 3" onclick="imageClicked('Image 3')">
+        <img src="image4.png" alt="Image 4" onclick="imageClicked('Image 4')">
+    </div>
+    <p id="message"></p>
+
+    <script>
+        function imageClicked(imageName) {
+            document.getElementById("message").innerText = imageName + " was clicked!";
+        }
+    </script>
+</body>
+</html>
