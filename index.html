@@ -4,7 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clickable Images</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { text-align: center; font-family: Arial, sans-serif; }
+    .img-container { margin-top: 20px; }
+    img {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 15px; /* Rounded corners */
+      border: 2px solid #ccc;
+      transition: transform 0.2s;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <h1>Click an Image!</h1>
