@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suggestion Box</title>
+</head>
+<body>
+    <h1>Suggestion Box</h1>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="suggestion">Your Suggestion:</label><br>
+        <textarea id="suggestion" name="suggestion" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Send Suggestion">
+    </form>
+    <br>
+    <button onclick="history.back()">Back</button>
+</body>
+</html>

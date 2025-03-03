@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Bowl</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.history.back();">Back</button>
+    <iframe allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" 
+            src="https://www.jopi.com/embed.php?game=subway-surfers" 
+            frameborder="0" scrolling="no">
+    </iframe>
+</body>
+</html>
