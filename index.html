@@ -3,98 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unblocked Games '25</title>
+    <title>Unblocked Games '25 - Enter Key</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            color: #333;
             text-align: center;
         }
         h1 {
             font-size: 48px;
-            color: #333;
             margin-top: 50px;
+            color: #333;
         }
-        .homepage-container {
-            margin-top: 100px;
+        .message {
+            font-size: 24px;
+            color: #666;
+            margin-top: 30px;
         }
-        .button-wrapper {
+        .password-container {
+            margin-top: 40px;
+        }
+        .password-box {
+            padding: 12px;
+            font-size: 18px;
+            width: 250px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.3s ease;
+        }
+        .password-box:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        .submit-button {
             display: inline-block;
-            margin: 20px;
-            position: relative;
-            cursor: pointer;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .button {
-            width: 300px;
-            height: 150px;
             background-color: #4CAF50;
             color: white;
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-        }
-        .button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .button img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.5;
-        }
-        .button-text {
-            position: absolute;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .button-container {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
             margin-top: 20px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .error-message {
+            color: red;
+            font-size: 18px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
     <h1>Unblocked Games '25</h1>
+    <p class="message">Enter the key to proceed</p>
 
-    <div class="homepage-container">
-        <div class="button-container">
-            <!-- Button 1 (Redirect to gamespages.html) -->
-            <div class="button-wrapper">
-                <a href="gamespages.html">
-                    <div class="button">
-                        <img src="9bf36a8e1a3a47a10acd9b0f8d134ca5-removebg-preview.png" alt="Games Button">
-                        <div class="button-text">Play Games</div>
-                    </div>
-                </a>
-            </div>
-            
-            <!-- Button 2 -->
-            <div class="button-wrapper">
-                <a href="suggestions.html">
-                    <div class="button">
-                        <img src="your-image-2.jpg" alt="Suggestions Button">
-                        <div class="button-text">Give Suggestions</div>
-                    </div>
-                </a>
-            </div>
-        </div>
+    <div class="password-container">
+        <input type="password" id="password" class="password-box" placeholder="Enter password" />
+        <br>
+        <a href="beginner.html" class="submit-button" id="submitButton">Enter</a>
+        <p class="error-message" id="errorMessage" style="display:none;">Incorrect password. Try again.</p>
     </div>
 
-    <a href="javascript:history.back()" class="back-button">Back</a>
+    <script>
+        const passwordInput = document.getElementById('password');
+        const submitButton = document.getElementById('submitButton');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        submitButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const enteredPassword = passwordInput.value;
+            
+            if (enteredPassword === 'hello') {
+                window.location.href = "beginner.html"; // Redirect to beginner.html
+            } else {
+                errorMessage.style.display = 'block'; // Show error message
+                passwordInput.value = ''; // Clear the input field
+            }
+        });
+
+        // Allow "Enter" key to trigger the password submission
+        passwordInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                submitButton.click();
+            }
+        });
+    </script>
 
 </body>
-</html>
-
 </html>
