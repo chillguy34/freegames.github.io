@@ -3,164 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unblocked Games '25</title>
+    <title>Suggestion Box</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
         }
         h1 {
-            text-align: center;
-            font-size: 36px;
+            font-size: 48px;
+            margin-top: 50px;
             color: #333;
+        }
+        .form-container {
             margin-top: 30px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
+            max-width: 600px;
         }
-        h2 {
-            font-size: 28px;
-            text-align: center;
-            color: #333;
-            margin-top: 20px;
-        }
-        p {
-            text-align: center;
-            font-size: 16px;
-            color: #666;
-        }
-        .game-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        .game-wrapper {
-            text-align: center;
-        }
-        .game {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: white;
-            overflow: hidden;
-        }
-        .game:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .game img {
+        .input-box {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .new-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: red;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-            font-size: 12px;
-        }
-        .game-title {
-            font-size: 16px;
-            font-weight: bold;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
             margin-top: 10px;
-            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
         }
-        .suggestions-button {
+        .input-box:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        .submit-button {
             display: inline-block;
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-        .suggestions-button:hover {
-            background-color: #45a049;
-        }
-        .back-button {
-            display: inline-block;
-            background-color: #888;
-            color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 16px;
             border-radius: 5px;
             margin-top: 20px;
             text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #f44336;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .back-button:hover {
-            background-color: #777;
+            background-color: #e53935;
         }
     </style>
 </head>
 <body>
 
-    <h1>Unblocked Games '25</h1>
-    <p>Pick a game and start playing!</p>
-
-    <!-- New Games Section -->
-    <h2>New Games</h2>
-    <div class="game-container">
-        <div class="game-wrapper">
-            <a href="Cookie-Clicker.html">
-                <div class="game">
-                    <img src="Cookie-Clicker.jpg" alt="Cookie Clicker">
-                    <span class="new-badge">New</span>
-                </div>
-            </a>
-            <div class="game-title">Cookie Clicker</div>
-        </div>
-    </div>
-
-    <!-- Games Section -->
-    <h2>Games</h2>
-    <div class="game-container">
-        <div class="game-wrapper">
-            <a href="retro_bowl.html">
-                <div class="game">
-                    <img src="retro-bowl-j17-logo.avif" alt="Retro Bowl">
-                </div>
-            </a>
-            <div class="game-title">Retro Bowl</div>
-        </div>
-        <div class="game-wrapper">
-            <a href="subway-surfers.html">
-                <div class="game">
-                    <img src="unnamed.webp" alt="Subway Surfers">
-                </div>
-            </a>
-            <div class="game-title">Subway Surfers</div>
-        </div>
-        <div class="game-wrapper">
-            <a href="slope.html">
-                <div class="game">
-                    <img src="slope-game-logo4.jpg" alt="Slope">
-                </div>
-            </a>
-            <div class="game-title">Slope</div>
-        </div>
-        <div class="game-wrapper">
-            <a href="smashkarts.html">
-                <div class="game">
-                    <img src="f7404b689e-450.webp" alt="SmashKarts.io">
-                </div>
-            </a>
-            <div class="game-title">SmashKarts.io</div>
-        </div>
-    </div>
-
-    <p>More games coming soon...</p>
-
-    <a href="suggestions.html" class="suggestions-button">Give Suggestions</a>
-    <br>
-    <a href="javascript:history.back()" class="back-button">Back</a>
+    <h1>Suggestion Box</h1>
     
+    <div class="form-container">
+        <form action="mailto:chillguy123456@mail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" class="input-box" placeholder="Your Name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" class="input-box" placeholder="Your Email" required><br><br>
+
+            <label for="suggestion">Your Suggestion:</label><br>
+            <textarea id="suggestion" name="suggestion" class="input-box" rows="6" placeholder="Enter your suggestion here" required></textarea><br><br>
+
+            <input type="submit" value="Send Suggestion" class="submit-button">
+        </form>
+        
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
 </body>
 </html>
